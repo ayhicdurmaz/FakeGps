@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SettingsFragment"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Loglama Aktif"
+            android:textSize="16sp"
+            android:paddingBottom="8dp" />
+
+        <Switch
+            android:id="@+id/switch_logging"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simüle edilen konum verilerini kaydet" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Uygulama Kilidi"
+            android:textSize="16sp"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <Switch
+            android:id="@+id/switch_app_lock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Uygulamayı PIN veya parmak iziyle koru" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Uygulama Tespiti Engelleme"
+            android:textSize="16sp"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <Switch
+            android:id="@+id/switch_app_detection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Diğer uygulamaların sahte GPS kullandığınızı algılamasını önle" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Otomatik Başlatma"
+            android:textSize="16sp"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <Switch
+            android:id="@+id/switch_autostart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Uygulamanın cihaz açıldığında otomatik olarak başlamasını sağlar" />
+
+    </LinearLayout>
+</ScrollView>
