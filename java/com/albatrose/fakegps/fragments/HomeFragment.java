@@ -76,6 +76,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
         ((MainActivity) requireActivity()).setFabClickListener(() -> {
             if(!MainActivity.isMocking()){
                 MainActivity.setFake(fakeLocation);
+                saveLocationToDatabase();
             }
         });
     }
@@ -99,7 +100,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
 
     @NonNull
     private String getCurrentTimestamp() {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd - HH:mm:ss", Locale.getDefault());
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy - HH:mm:ss", Locale.getDefault());
         return sdf.format(new Date());
     }
 
@@ -137,7 +138,6 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
 
                 @Override
                 public void onError(@NonNull com.google.android.gms.common.api.Status status) {
-                    // Hata durumunu işleyin
                     System.out.println("An error occurred: " + status);
                 }
             });
@@ -148,8 +148,8 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Varsayılan bir konum ayarla (örneğin, İstanbul)
         LatLng defaultLocation = new LatLng(41.0082, 28.9784);
+        fakeLocation = defaultLocation;
         mMap.addMarker(new MarkerOptions().position(defaultLocation).title("Default Location"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(defaultLocation, 10));
 

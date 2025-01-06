@@ -6,7 +6,7 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-@Database(entities = {Location.class}, version = 3)
+@Database(entities = {Location.class}, version = 6)
 public abstract class AppDatabase extends RoomDatabase{
     public abstract LocationDAO locationDAO();
 

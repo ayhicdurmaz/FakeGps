@@ -23,6 +23,7 @@
             android:id="@+id/switch_logging"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:text="Simüle edilen konum verilerini kaydet" />
 
 
@@ -38,35 +39,10 @@
             android:id="@+id/switch_app_lock"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:text="Uygulamayı PIN veya parmak iziyle koru" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Uygulama Tespiti Engelleme"
-            android:textSize="16sp"
-            android:paddingTop="16dp"
-            android:paddingBottom="8dp" />
 
-        <Switch
-            android:id="@+id/switch_app_detection"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Diğer uygulamaların sahte GPS kullandığınızı algılamasını önle" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Otomatik Başlatma"
-            android:textSize="16sp"
-            android:paddingTop="16dp"
-            android:paddingBottom="8dp" />
-
-        <Switch
-            android:id="@+id/switch_autostart"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Uygulamanın cihaz açıldığında otomatik olarak başlamasını sağlar" />
 
     </LinearLayout>
 </ScrollView>
